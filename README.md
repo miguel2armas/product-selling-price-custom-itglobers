@@ -1,3 +1,5 @@
-# Store Block course template
+# Store Product Selling Price Custom
 
-Here you'll learn how to create awesome Store Framework blocks!
+product-selling-price-custom for change price in store for seller price
+
+add "product-selling-price-custom" in the summary and pdp

@@ -1,0 +1,16 @@
+.ProductSellingPriceCustom_price{
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    color: #004393;
+}
+.ProductSellingPriceCustom_price_pdp{
+    display: flex;
+    align-items: center;
+    font-size: 1.875rem;
+    font-weight: 400;
+    line-height: 2.25rem;
+    color: #004393;
+}

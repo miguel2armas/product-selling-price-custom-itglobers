@@ -1,5 +1,5 @@
 {
-  "countdown": {
-    "component": "Countdown"
+  "product-selling-price-custom": {
+    "component": "ProductSellingPriceCustom"
   }
 }
