@@ -1,13 +1,18 @@
 import React, { useContext, useEffect, useState } from 'react'
 import "./ProductSellingPriceCustom.css"
 import { useCssHandles } from 'vtex.css-handles'
+//@ts-ignore
 import { ProductContext } from 'vtex.product-context'
+//@ts-ignore
 import { FormattedCurrency } from 'vtex.format-currency'
+//@ts-ignore
 import { useRenderSession } from 'vtex.session-client';
+//@ts-ignore
 import { Spinner } from 'vtex.styleguide'
 import { ProductContextState } from '../../typings/ProductType';
 import { CustomHttp } from '../../helpers/CustomHttp'
 import { Session } from '../../typings/LoginType'
+import BtnAddToCart from '../btnAddToCart'
 const CSS_HANDLES = [
   "ProductSellingPriceCustom_price",
   "ProductSellingPriceCustom_price_pdp"
@@ -96,6 +101,8 @@ export const ProductSellingPriceCustom = ({type}:Props) => {
       ):(
           <Spinner color="#004393" size={20} />
       )}
+      {product?.selectedItem ? (<BtnAddToCart product={product} textContent={'agregar'} selectedQuantity={1} />):null}
+      
     </span>
   )
 }

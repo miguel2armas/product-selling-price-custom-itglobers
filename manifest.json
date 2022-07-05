@@ -1,5 +1,5 @@
 {
-  "vendor": "itglobers",
+  "vendor": "dartelclqa",
   "name": "product-selling-price-custom",
   "version": "0.0.1",
   "title": "product-selling-price-custom",
@@ -15,6 +15,7 @@
     "vtex.css-handles": "0.x",
     "vtex.product-context": "0.x",
     "vtex.format-currency": "0.x",
+    "vtex.add-to-cart-button": "0.x",
     "vtex.session-client": "1.x"
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
