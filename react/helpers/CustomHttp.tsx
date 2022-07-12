@@ -10,6 +10,8 @@ interface DataIn{
     type:string
 
 }
+console.log({UrlBase});
+
 export const CustomHttp = (data:DataIn)=>{
     return new Promise(resolve => {
             SendCustomHttp(data, resolve)
@@ -36,4 +38,19 @@ const SendCustomHttp = (data:DataIn, resolve:any)=>{
             }
         }
         xhr.send(JSON.stringify(bodyParams));
+}
+
+export const FetchResponse = async(data:DataIn) =>{
+    const { bodyParams, type, url, urlParams } = data;
+    const response =  canUseDOM?
+    //@ts-ignore
+    await fetch(`${UrlBase}${url}${urlParams}`, {
+        method: type,
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(bodyParams)
+      }):null;
+
+      return response ? response.json():null;
 }
